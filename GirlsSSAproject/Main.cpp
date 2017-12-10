@@ -1,62 +1,9 @@
 ﻿# include <Siv3D.hpp>
 # include <HamFramework.hpp>
+# include "Title.h"
+# include "Select.h"
+# include "Game.h"
 
-class Title : public SceneManager<String>::Scene
-{
-public:
-	void init() override
-	{
-
-	}
-
-	void update() override
-	{
-
-	}
-
-	void draw() const override
-	{
-
-	}
-};
-
-class Select : public SceneManager<String>::Scene
-{
-public:
-	void init() override
-	{
-
-	}
-
-	void update() override
-	{
-
-	}
-
-	void draw() const override
-	{
-
-	}
-};
-
-class Game : public SceneManager<String>::Scene
-{
-public:
-	void init() override
-	{
-
-	}
-
-	void update() override
-	{
-
-	}
-
-	void draw() const override
-	{
-
-	}
-};
 
 void Main()
 {
