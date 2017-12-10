@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿cl : コマンド ライン warning D9030: '/Gm' はマルチプロセシングと互換性がありません。/MP スイッチを無視します
   System.cpp
 c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(58): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
@@ -13,3 +14,9 @@ c:\users\iy\documents\girlsssaproject\girlsssaproject\system.cpp(77): error C224
   Enemy.cpp
   Block.cpp
   コードを生成中...
+=======
+﻿  Main.cpp
+     ライブラリ C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.lib とオブジェクト C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exp を作成中
+  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
+  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)
+>>>>>>> 7eaa028f52d9fddb25e161673d595a742f23dc6a
