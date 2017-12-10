@@ -1,14 +1,73 @@
-﻿
-# include <Siv3D.hpp>
+﻿# include <Siv3D.hpp>
+# include <HamFramework.hpp>
+
+class Title : public SceneManager<String>::Scene
+{
+public:
+	void init() override
+	{
+
+	}
+
+	void update() override
+	{
+
+	}
+
+	void draw() const override
+	{
+
+	}
+};
+
+class Select : public SceneManager<String>::Scene
+{
+public:
+	void init() override
+	{
+
+	}
+
+	void update() override
+	{
+
+	}
+
+	void draw() const override
+	{
+
+	}
+};
+
+class Game : public SceneManager<String>::Scene
+{
+public:
+	void init() override
+	{
+
+	}
+
+	void update() override
+	{
+
+	}
+
+	void draw() const override
+	{
+
+	}
+};
 
 void Main()
 {
-	const Font font(30);
+	SceneManager<String> manager;
+
+	manager.add<Title>(L"Title");
+	manager.add<Select>(L"Result");
+	manager.add<Game>(L"Game");
 
 	while (System::Update())
 	{
-		font(L"ようこそ、Siv3D の世界へ！").draw();
-
-		Circle(Mouse::Pos(), 50).draw({ 255, 0, 0, 127 });
+		manager.updateAndDraw;
 	}
 }
