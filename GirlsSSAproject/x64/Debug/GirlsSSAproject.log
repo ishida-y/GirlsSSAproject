@@ -1,0 +1,5 @@
+﻿  Main.cpp
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(62): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(63): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\x64\Debug\GirlsSSAproject.exe
+  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\x64\Debug\GirlsSSAproject.pdb (Full PDB)
