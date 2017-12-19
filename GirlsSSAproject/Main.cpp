@@ -8,6 +8,8 @@
 
 void Main()
 {
+	Window::Resize(1280, 720);
+
 	SceneManager<String> manager;
 
 	manager.add<Title>(L"Title");

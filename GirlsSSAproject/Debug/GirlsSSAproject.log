@@ -1,22 +1,10 @@
-<<<<<<< HEAD
 ﻿cl : コマンド ライン warning D9030: '/Gm' はマルチプロセシングと互換性がありません。/MP スイッチを無視します
-  System.cpp
-c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(58): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(59): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\iy\documents\girlsssaproject\girlsssaproject\system.cpp(77): error C2248: 'Stick::Stick': private メンバー (クラス 'Stick' で宣言されている) にアクセスできません。
-  c:\users\iy\documents\girlsssaproject\girlsssaproject\system.cpp(30): note: 'Stick::Stick' の宣言を確認してください
-  c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(15): note: 'Stick' の宣言を確認してください
-  Stage.cpp
-  Player.cpp
-  Novel.cpp
+  Title.cpp
+c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(62): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(63): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
   Main.cpp
-  GameManager.cpp
-  Enemy.cpp
-  Block.cpp
+c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(62): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(63): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
   コードを生成中...
-=======
-﻿  Main.cpp
-     ライブラリ C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.lib とオブジェクト C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exp を作成中
-  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
-  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)
->>>>>>> 7eaa028f52d9fddb25e161673d595a742f23dc6a
+  GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
+  GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)

@@ -7,9 +7,9 @@ void Game::init() {
 }
 
 void Game::update() {
-
+	actoin.update();
 }
 
 void Game::draw() const {
-
+	actoin.draw();
 }

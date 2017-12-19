@@ -30,11 +30,12 @@ void Button::update(s3d::Key controller, s3d::Key keyboard) {
 Stick::Stick() :
 	R(Vec2(0, 0)),
 	L(Vec2(0, 0)) {
-	XInput(0).setRightThumbDeadZone();
-	XInput(0).setLeftThumbDeadZone();
+		XInput(0).setRightThumbDeadZone();
+		XInput(0).setLeftThumbDeadZone();
 }
 
-void Stick::update(s3d::Key Rup, s3d::Key Rdown, s3d::Key Rright, s3d::Key Rleft, s3d::Key Lup, s3d::Key Ldown, s3d::Key Lright, s3d::Key Lleft) {
+void Stick::update(s3d::Key Rup, s3d::Key Rdown, s3d::Key Rright, s3d::Key Rleft,
+	s3d::Key Lup, s3d::Key Ldown, s3d::Key Lright, s3d::Key Lleft) {
 
 	if (XInput(0).isConnected()) {
 		R.x = XInput(0).rightThumbX;
@@ -42,33 +43,32 @@ void Stick::update(s3d::Key Rup, s3d::Key Rdown, s3d::Key Rright, s3d::Key Rleft
 		L.x = XInput(0).leftThumbX;
 		L.y = XInput(0).leftThumbY;
 	}
-
 	else {
 		R = Vec2(0, 0);
 		if (Rup.pressed) {
-			R.y = 1;
+			R.y += 1;
 		}
 		if (Rdown.pressed) {
-			R.y = -1;
+			R.y += -1;
 		}
 		if (Rright.pressed) {
-			R.x = 1;
+			R.x += 1;
 		}
 		if (Rleft.pressed) {
-			R.y = -1;
+			R.x += -1;
 		}
 		L = Vec2(0, 0);
 		if (Lup.pressed) {
-			R.y = 1;
+			L.y += 1;
 		}
 		if (Ldown.pressed) {
-			R.y = -1;
+			L.y += -1;
 		}
 		if (Lright.pressed) {
-			R.x = 1;
+			L.x += 1;
 		}
 		if (Lleft.pressed) {
-			R.y = -1;
+			L.x += -1;
 		}
 	}
 }
@@ -114,7 +114,8 @@ void KeyInput::update() {
 			triggerL = 0;
 		}
 	}
-	stick.update(Input::KeyUp, Input::KeyDown, Input::KeyRight, Input::KeyLeft, Input::KeyW, Input::KeyS, Input::KeyD, Input::KeyA);
+	stick.update(Input::KeyUp, Input::KeyDown, Input::KeyRight, Input::KeyLeft,
+		Input::KeyW, Input::KeyS, Input::KeyD, Input::KeyA);
 }
 
 
