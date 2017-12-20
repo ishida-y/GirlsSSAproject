@@ -9,6 +9,7 @@ public:
 	ham::PhysicsWorld world;
 	double ease;
 	Vec2 camera, t_camera;
+	double camera_size, t_camera_size;
 
 	Player player;
 	BlockManager blockmanager;

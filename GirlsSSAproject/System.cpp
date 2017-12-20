@@ -8,20 +8,25 @@ Button::Button() :
 
 }
 
-void Button::update(s3d::Key controller, s3d::Key keyboard) {
+void Button::update(s3d::Key Xcon, s3d::Key pad, s3d::Key key) {
 
 	if (XInput(0).isConnected()) {
-		clicked = controller.clicked;
-		pressed = controller.pressed;
-		pressedDuration = controller.pressedDuration;
-		released = controller.released;
+		clicked = Xcon.clicked;
+		pressed = Xcon.pressed;
+		pressedDuration = Xcon.pressedDuration;
+		released = Xcon.released;
 	}
-
+	else if (Gamepad(0).isConnected()) {
+		clicked = pad.clicked;
+		pressed = pad.pressed;
+		pressedDuration = pad.pressedDuration;
+		released = pad.released;
+	}
 	else {
-		clicked = keyboard.clicked;
-		pressed = keyboard.pressed;
-		pressedDuration = keyboard.pressedDuration;
-		released = keyboard.released;
+		clicked = key.clicked;
+		pressed = key.pressed;
+		pressedDuration = key.pressedDuration;
+		released = key.released;
 	}
 
 }
@@ -42,6 +47,12 @@ void Stick::update(s3d::Key Rup, s3d::Key Rdown, s3d::Key Rright, s3d::Key Rleft
 		R.y = XInput(0).rightThumbY;
 		L.x = XInput(0).leftThumbX;
 		L.y = XInput(0).leftThumbY;
+	}
+	else if (Gamepad(0).isConnected()) {
+		R.x = Gamepad(0).z;
+		R.y = Gamepad(0).r;
+		L.x = Gamepad(0).x;
+		L.y = Gamepad(0).y;
 	}
 	else {
 		R = Vec2(0, 0);
@@ -82,23 +93,27 @@ KeyInput::KeyInput() :
 }
 
 void KeyInput::update() {
-	buttonStart.update(XInput(0).buttonStart, Input::KeyEscape);
-	buttonBack.update(XInput(0).buttonBack, Input::KeyBackspace);
-	buttonUp.update(XInput(0).buttonUp, Input::KeyUp);
-	buttonDown.update(XInput(0).buttonDown, Input::KeyDown);
-	buttonRight.update(XInput(0).buttonRight, Input::KeyRight);
-	buttonLeft.update(XInput(0).buttonLeft, Input::KeyLeft);
-	buttonA.update(XInput(0).buttonA, Input::KeySlash);
-	buttonB.update(XInput(0).buttonB, Input::KeyBackslash);
-	buttonX.update(XInput(0).buttonX, Input::KeySemicolon);
-	buttonY.update(XInput(0).buttonY, Input::KeyColon);
-	buttonR.update(XInput(0).buttonRB, Input::KeyRShift);
-	buttonL.update(XInput(0).buttonLB, Input::KeyLShift);
-	buttonRS.update(XInput(0).buttonRThumb, Input::KeyRControl);
-	buttonLS.update(XInput(0).buttonLThumb, Input::KeyLControl);
+	buttonStart.update(XInput(0).buttonStart, Gamepad(0).button(9), Input::KeyEscape);
+	buttonBack.update(XInput(0).buttonBack, Gamepad(0).button(8), Input::KeyBackspace);
+	buttonUp.update(XInput(0).buttonUp, Gamepad(0).povForward, Input::KeyUp);
+	buttonDown.update(XInput(0).buttonDown, Gamepad(0).povBackward, Input::KeyDown);
+	buttonRight.update(XInput(0).buttonRight, Gamepad(0).povRight, Input::KeyRight);
+	buttonLeft.update(XInput(0).buttonLeft, Gamepad(0).povLeft, Input::KeyLeft);
+	buttonA.update(XInput(0).buttonA, Gamepad(0).button(2), Input::KeySlash);
+	buttonB.update(XInput(0).buttonB, Gamepad(0).button(1), Input::KeyBackslash);
+	buttonX.update(XInput(0).buttonX, Gamepad(0).button(0), Input::KeySemicolon);
+	buttonY.update(XInput(0).buttonY, Gamepad(0).button(3), Input::KeyColon);
+	buttonR.update(XInput(0).buttonRB, Gamepad(0).button(5), Input::KeyRShift);
+	buttonL.update(XInput(0).buttonLB, Gamepad(0).button(4), Input::KeyLShift);
+	buttonRS.update(XInput(0).buttonRThumb, Gamepad(0).button(11), Input::KeyRControl);
+	buttonLS.update(XInput(0).buttonLThumb, Gamepad(0).button(10), Input::KeyLControl);
 	if (XInput(0).isConnected()) {
 		triggerR = XInput(0).rightTrigger;
 		triggerL = XInput(0).leftTrigger;
+	}
+	else if (Gamepad(0).isConnected()) {
+		triggerR = Gamepad(0).u;
+		triggerL = Gamepad(0).v;
 	}
 	else {
 		if (Input::KeyLBracket.pressed) {
@@ -120,7 +135,7 @@ void KeyInput::update() {
 
 
 GameSystem::GameSystem() :
-	sound_vol(100) {
+	sound_vol(1000){
 
 }
 

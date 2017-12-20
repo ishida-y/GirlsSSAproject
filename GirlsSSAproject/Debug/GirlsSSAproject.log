@@ -1,10 +1,5 @@
-﻿cl : コマンド ライン warning D9030: '/Gm' はマルチプロセシングと互換性がありません。/MP スイッチを無視します
-  Title.cpp
+﻿  Player.cpp
 c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(62): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
 c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(63): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-  Main.cpp
-c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(62): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(63): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-  コードを生成中...
   GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
   GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)

@@ -9,7 +9,7 @@ public:
 	bool released;
 
 	Button();
-	void update(s3d::Key controller, s3d::Key keyboard);
+	void update(s3d::Key Xcon, s3d::Key pad, s3d::Key key);
 };
 
 class Stick {
