@@ -45,12 +45,12 @@ Ground::Ground() {
 
 void Ground::draw() const {
 	if (id == 10) {
-		obj.drawFrame(0.01, 0.0 , Palette::Green);
+		obj.drawFrame(0.03, 0.0 , Palette::Green);
 	}
 	else if (id == 11) {
-		obj.drawFrame(0.01, 0.0, Palette::Greenyellow);
+		obj.drawFrame(0.03, 0.0, Palette::Greenyellow);
 	}
 	else if (id == 12) {
-		obj.drawFrame(0.01, 0.0, Palette::Lightgreen);
+		obj.drawFrame(0.03, 0.0, Palette::Lightgreen);
 	}
 }

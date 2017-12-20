@@ -10,15 +10,18 @@ t_camera_size(1),
 player(world),
 blockmanager(world){
 	world.setGravity(Vec2(0.0, 9.8));
-	camera = Window::Center() - player.player1.getPos();
-	t_camera = Window::Center() - player.player1.getPos();
+	camera = Window::Center() - player.player.getPos();
+	t_camera = Window::Center() - player.player.getPos();
 }
 
 void Action::update() {
+
+
 	player.update();
 
 	world.update(1.0 / 60.0);
-	t_camera = Window::Center() - player.player1.getPos();
+
+	t_camera = Window::Center() - player.player.getPos();
 	camera = ease * camera + (1 - ease) * t_camera;
 	if (GameSystem::get().input.buttonUp.clicked && t_camera_size < 1.3) {
 		t_camera_size += 0.2;
