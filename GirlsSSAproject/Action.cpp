@@ -1,4 +1,4 @@
-# include "Action.h"
+#include "Action.h"
 #include "System.h"
 
 Action::Action() :
@@ -23,7 +23,19 @@ blockmanager(world){
 	TextureAsset::PreloadAll;
 }
 
+<<<<<<< HEAD
 void Action::update() {
+=======
+void Action::update(String &part) {
+
+	if (GameSystem::get().input.buttonA.clicked) {
+		part = L"novel"; //Aボタン押したらクリア
+		return;
+	}
+
+	player.update();
+
+>>>>>>> 6b238e83c793737db2c1bc90a400ebebac2ebade
 	world.update(1.0 / 60.0);
 
 	enemymanager.update(player);

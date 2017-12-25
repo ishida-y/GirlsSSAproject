@@ -1,16 +1,11 @@
 #pragma once
 #include<Siv3D.hpp>
 #include<HamFramework.hpp>
-#include "Action.h"
-#include "Novel.h"
 
-class Game : public SceneManager<String>::Scene
+class ToBeCon : public SceneManager<String>::Scene
 {
 public:
-	String part;
-
-	Action actoin;
-	Novel novel;
+	Font font;
 
 	void init() override;
 	void update() override;

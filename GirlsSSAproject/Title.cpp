@@ -9,7 +9,7 @@ void Title::init() {
 
 void Title::update() {
 	if (GameSystem::get().input.buttonA.clicked) {
-		changeScene(L"Select");
+		changeScene(L"Game");
 	}
 }
 
