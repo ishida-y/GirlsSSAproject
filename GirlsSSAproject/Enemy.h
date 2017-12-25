@@ -19,6 +19,7 @@ public:
 	int c_move;
 	int c_hit;
 
+
 	Enemy();
 	void update(const Player& player);
 	virtual void move(const Player& player) = 0;
@@ -30,12 +31,12 @@ public:
 	virtual ~Enemy() = default;
 };
 
-class Okami : public Enemy {
+class Dog : public Enemy {
 public:
 
-	const static Vec2 OKAMI_SIZE;
+	const static Vec2 DOG_SIZE;
 
-	Okami(const ham::PhysicsWorld& world, Vec2 _pos);
+	Dog(const ham::PhysicsWorld& world, Vec2 _pos);
 
 	void move(const Player& player) override;
 	void attack(const Player& player) override;
@@ -46,7 +47,14 @@ public:
 class Orc : public Enemy {
 public:
 
-	//const static Vec2 ORC_SIZE;
+	const static Vec2 ORC_SIZE;
+
+	Orc(const ham::PhysicsWorld& world, Vec2 _pos);
+
+	void move(const Player& player) override;
+	void attack(const Player& player) override;
+	void check_hit(const Player& player) override;
+	void draw() const override;
 };
 
 class EnemyManager {
