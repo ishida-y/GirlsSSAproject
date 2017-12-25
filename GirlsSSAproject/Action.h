@@ -15,7 +15,7 @@ public:
 	BlockManager blockmanager;
 
 	Action();
-	void update();
+	void update(String &part);
 	void draw() const;
 private:
 };

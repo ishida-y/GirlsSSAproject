@@ -1,6 +1,12 @@
-﻿  Block.cpp
-c:\users\iy\documents\girlsssaproject\girlsssaproject\block.cpp(6): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\iy\documents\girlsssaproject\girlsssaproject\block.cpp(9): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\iy\documents\girlsssaproject\girlsssaproject\block.cpp(31): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-  GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
-  GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)
+﻿cl : コマンド ライン warning D9030: '/Gm' はマルチプロセシングと互換性がありません。/MP スイッチを無視します
+  Novel.cpp
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(62): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(63): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\novel.cpp(84): warning C4244: '引数': 'double' から 's3d::uint32' への変換です。データが失われる可能性があります。
+  Block.cpp
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\block.cpp(6): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\block.cpp(9): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\block.cpp(31): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  コードを生成中...
+  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
+  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)

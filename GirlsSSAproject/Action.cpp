@@ -1,4 +1,4 @@
-# include "Action.h"
+#include "Action.h"
 #include "System.h"
 
 Action::Action() :
@@ -14,7 +14,7 @@ blockmanager(world){
 	t_camera = Window::Center() - player.player.getPos();
 }
 
-void Action::update() {
+void Action::update(String &part) {
 
 
 	player.update();
