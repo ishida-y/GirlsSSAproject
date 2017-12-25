@@ -3,6 +3,7 @@
 # include "Title.h"
 # include "Select.h"
 # include "Game.h"
+# include "GameOver.h"
 # include "System.h"
 
 
@@ -15,6 +16,7 @@ void Main()
 	manager.add<Title>(L"Title");
 	manager.add<Select>(L"Select");
 	manager.add<Game>(L"Game");
+	manager.add<GameOver>(L"GameOver");
 
 	while (System::Update())
 	{

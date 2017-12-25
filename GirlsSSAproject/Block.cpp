@@ -2,7 +2,7 @@
 
 BlockManager::BlockManager(const ham::PhysicsWorld& world) {
 	normal_block = world.createRect(Vec2(0.0, 0.0), RectF(0, 0), PhysicsMaterial(1.0, 0.01, 0.0), none, PhysicsBodyType::Static);
-	CSVReader csv(L"map.csv");
+	CSVReader csv(L"Data/map.csv");
 	for (int i = 0; i < csv.rows; i++) {
 		int x = -1;
 		int j = 0;

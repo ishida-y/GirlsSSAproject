@@ -18,7 +18,7 @@ Player::Player(const ham::PhysicsWorld& world) :
 	player.setGravityScale(2.0);
 	player.setFixedRotation(true);
 
-	CSVReader csv(L"map.csv");
+	CSVReader csv(L"Data/map.csv");
 	for (int i = 0; i < csv.rows; i++) {
 		int x = -1;
 		int j = 0;

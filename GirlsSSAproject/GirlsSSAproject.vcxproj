@@ -166,6 +166,7 @@
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Novel.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -173,6 +174,7 @@
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="System.cpp" />
     <ClCompile Include="Title.cpp" />
+    <ClCompile Include="ToBeCon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
@@ -291,6 +293,8 @@
     <ClInclude Include="Block.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameOver.h" />
+    <ClInclude Include="ToBeCon.h" />
     <ClInclude Include="Novel.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Select.h" />

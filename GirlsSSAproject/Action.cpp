@@ -16,6 +16,10 @@ blockmanager(world){
 
 void Action::update(String &part) {
 
+	if (GameSystem::get().input.buttonA.clicked) {
+		part = L"novel"; //Aボタン押したらクリア
+		return;
+	}
 
 	player.update();
 

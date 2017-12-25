@@ -4,6 +4,7 @@
 
 void Game::init() {
 	part = L"novel";
+	
 }
 
 void Game::update() {
@@ -12,6 +13,9 @@ void Game::update() {
 	}
 	if (part == L"novel" || part == L"novel_on_action") {
 		novel.update(part);
+	}
+	if (part == L"finish") {
+		changeScene(L"Title");
 	}
 }
 

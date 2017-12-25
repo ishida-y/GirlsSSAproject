@@ -7,10 +7,8 @@ public:
 	String talker;
 	String words;
 
-	TalkInfo(/*int _scene, String _talker, String _words*/) :
-	scene(-1/*_scene*/)//,
-	//talker(/*_talker*/),
-	//words(/*_words*/)
+	TalkInfo() :
+	scene(-1)
 	{
 		
 	}
@@ -20,9 +18,9 @@ class Novel {
 public:
 	RectF window;
 	TextReader text;
+	String NextFileName;
 	int WaitCount;
-	Font font;
-	bool EnptyFlag = true;
+	//Font font;
 
 	std::vector<TalkInfo> talk_log;
 
