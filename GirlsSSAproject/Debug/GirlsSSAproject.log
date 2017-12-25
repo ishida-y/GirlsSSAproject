@@ -1,6 +1,7 @@
-﻿  Block.cpp
-c:\users\iy\documents\girlsssaproject\girlsssaproject\block.cpp(6): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\iy\documents\girlsssaproject\girlsssaproject\block.cpp(9): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\iy\documents\girlsssaproject\girlsssaproject\block.cpp(31): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+﻿  Enemy.cpp
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(132): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(133): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(142): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(156): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
   GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
   GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)

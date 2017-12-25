@@ -56,6 +56,8 @@ public:
 	KeyInput input;
 	int sound_vol;
 
+	bool debug;
+
 
 private:
 	GameSystem();
