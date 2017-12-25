@@ -3,6 +3,7 @@
 #include<HamFramework.hpp>
 #include "Player.h"
 #include "Block.h"
+#include "Enemy.h"
 
 class Action {
 public:
@@ -12,6 +13,7 @@ public:
 	double camera_size, t_camera_size;
 
 	Player player;
+	EnemyManager enemymanager;
 	BlockManager blockmanager;
 
 	Action();
