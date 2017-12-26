@@ -4,7 +4,8 @@
 #include"System.h"
 
 void GameOver::init() {
-
+	TextureAsset::Register(L"gameover", L"Data/gameover.png");
+	TextureAsset::PreloadAll;
 }
 void GameOver::update() {
 	if (GameSystem::get().input.buttonA.clicked) {
@@ -12,5 +13,6 @@ void GameOver::update() {
 	}
 }
 void GameOver::draw() const {
-	Println(L"Game Over:Aでタイトル画面へ");
+	//Println(L"Game Over:Aでタイトル画面へ");
+	TextureAsset(L"gameover").draw();
 }

@@ -16,6 +16,10 @@ void Game::update() {
 	if (part == L"finish") {
 		changeScene(L"Title");
 	}
+
+	if (actoin.player.hp <= 0) {
+		changeScene(L"GameOver");
+	}
 }
 
 void Game::draw() const {

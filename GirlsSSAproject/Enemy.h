@@ -18,6 +18,8 @@ public:
 	bool hit;
 	int c_move;
 	int c_hit;
+	int atc_damage;
+	int hit_damage;
 
 
 	Enemy();

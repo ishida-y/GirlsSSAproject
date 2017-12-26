@@ -28,7 +28,8 @@ Player::Player(const ham::PhysicsWorld& world) :
 	atc_c(0),
 	dir(1),
 	c_hit(0),
-	foot(RectF(player.getPos() + Vec2(-0.01, 0.0), PLAYER_SIZE + Vec2(0.02, BLOCK_SIZE.y))) {
+	foot(RectF(player.getPos() + Vec2(-0.01, 0.0), PLAYER_SIZE + Vec2(0.02, BLOCK_SIZE.y))),
+	clear(Vec2(0.0, 0.0)){
 	player.setGravityScale(2.0);
 	player.setFixedRotation(true);
 
@@ -42,7 +43,9 @@ Player::Player(const ham::PhysicsWorld& world) :
 				player1.pos = player.getPos();
 				player2.pos = player.getPos();
 			}
-
+			if ((int)csv.get<int>(i, j) == 2) {
+				clear = Vec2(BLOCK_SIZE.x*(double)j, BLOCK_SIZE.y*(double)i);
+			}
 			if ((int)csv.get<int>(i, j) / 10 == 3) {
 				RectF zone;
 				for (int k = 0; k < csv.rows; k++) {
@@ -108,9 +111,9 @@ void Player::move() {
 
 void Player::attack() {
 	if (atc_c == 0 && GameSystem::get().input.buttonX.clicked && c_hit == 0) {
-		atc_c = 10;
+		atc_c = 20;
 	}
-	if (atc_c == 5) {
+	if (atc_c == 10) {
 		if (dir == 1) {
 			atc_range = RectF(player.getPos() + Vec2(PLAYER_SIZE.x, 0.0), 64.0 / 100.0, PLAYER_SIZE.y);
 		}
@@ -135,13 +138,13 @@ void Player::check_hit(const EnemyManager& enemymanager) {
 	}
 	for (int i = 0; i < enemymanager.enemies.size(); i++) {
 		if (enemymanager.enemies[i]->atc_range.intersects(player1)) {
-			hp -= 20;
+			hp -= enemymanager.enemies[i]->atc_damage;;
 			player.setVelocity(Vec2(0, 0));
 			if (player1.pos.x > enemymanager.enemies[i]->range.pos.x) {
-				player.applyForce(Vec2(150, -100));
+				player.applyForce(Vec2(250, -100));
 			}
 			else {
-				player.applyForce(Vec2(-150, -100));
+				player.applyForce(Vec2(-250, -100));
 			}
 			c_hit = 30;
 		}
@@ -149,10 +152,10 @@ void Player::check_hit(const EnemyManager& enemymanager) {
 		if (enemymanager.enemies[i]->range.intersects(foot) && c_hit == 0) {
 			if (player1.pos.x + player1.w / 2 > enemymanager.enemies[i]->range.pos.x + enemymanager.enemies[i]->range.w / 2
 				&& player1.pos.y + player1.h < enemymanager.enemies[i]->range.pos.y) {
-				player.setVelocity(Vec2(4.1, player.getVelocity().y));
+				player.setVelocity(Vec2(2.1, player.getVelocity().y));
 			}
 			else if (player1.pos.y + player1.h < enemymanager.enemies[i]->range.pos.y) {
-				player.setVelocity(Vec2(-4.1, player.getVelocity().y));
+				player.setVelocity(Vec2(-2.1, player.getVelocity().y));
 			}
 		}
 	}
@@ -183,45 +186,83 @@ void Player::fall() {
 }
 
 void Player::draw() const {
-	static int c_8 = 0;
-	c_8++;
-	if (c_8 == 32) c_8 = 0;
+	if (GameSystem::get().debug) {
+		foot.draw();
+		player2.draw(Color(0, 0, 255, 64));
+		player1.draw(Palette::Red);
+		if (c_hit != 0) player1.draw(Palette::Orange);
+	}
 
-	foot.draw();
-	player2.draw(Color(0, 0, 255, 64));
-	player1.draw(Palette::Red);
-	if (c_hit != 0) player1.draw(Palette::Orange);
+	static int c_16 = 0;
 
-	if ((int)c_8 / 8 == 0) {
-		if (dir == 1) {
-			TextureAsset(L"ragu_1").mirror().scale(1.0 / 4.0 / 100.0).draw(player1.pos + Vec2(-68, -34) / 100.0);
+	if (fabs(player.getVelocity().x) >= 2 && fabs(player.getVelocity().y) < 0.3) {
+		c_16 += 2;
+	}
+	else if (fabs(player.getVelocity().x) >= 0.5 && fabs(player.getVelocity().y) < 0.3) {
+		c_16++;
+	}
+
+	if (c_16 >= 64) c_16 = 0;
+
+	if (atc_c == 0) {
+		if (fabs(player.getVelocity().x) < 0.5) {
+			if (dir == 1) {
+				TextureAsset(L"ragu_0").mirror().scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-26, -34) / 100.0);
+			}
+			else if (dir == -1) {
+				TextureAsset(L"ragu_0").scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-65, -34) / 100.0);
+			}
 		}
-		else if (dir == -1) {
-			TextureAsset(L"ragu_1").scale(1.0 / 4.0 / 100.0).draw(player1.pos + Vec2(-48, -34) / 100.0);
+		else {
+			if ((int)c_16 / 16 == 0) {
+				if (dir == 1) {
+					TextureAsset(L"ragu_1").mirror().scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-53, -14) / 100.0);
+				}
+				else if (dir == -1) {
+					TextureAsset(L"ragu_1").scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-38, -14) / 100.0);
+				}
+			}
+			else if ((int)c_16 / 16 == 1) {
+				if (dir == 1) {
+					TextureAsset(L"ragu_2").mirror().scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-53, -14) / 100.0);
+				}
+				else if (dir == -1) {
+					TextureAsset(L"ragu_2").scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-38, -14) / 100.0);
+				}
+			}
+			else if ((int)c_16 / 16 == 2) {
+				if (dir == 1) {
+					TextureAsset(L"ragu_3").mirror().scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-53, -14) / 100.0);
+				}
+				else if (dir == -1) {
+					TextureAsset(L"ragu_3").scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-38, -14) / 100.0);
+				}
+			}
+			else {
+				if (dir == 1) {
+					TextureAsset(L"ragu_4").mirror().scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-53, -14) / 100.0);
+				}
+				else if (dir == -1) {
+					TextureAsset(L"ragu_4").scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-38, -14) / 100.0);
+				}
+
+			}
 		}
 	}
-	else if ((int)c_8 / 8 == 1) {
+	else if (atc_c > 10) {
 		if (dir == 1) {
-			TextureAsset(L"ragu_2").mirror().scale(1.0 / 4.0 / 100.0).draw(player1.pos + Vec2(-68, -34) / 100.0);
+			TextureAsset(L"ragu_5").mirror().scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-53, -14) / 100.0);
 		}
 		else if (dir == -1) {
-			TextureAsset(L"ragu_2").scale(1.0 / 4.0 / 100.0).draw(player1.pos + Vec2(-48, -34) / 100.0);
-		}
-	}
-	else if ((int)c_8 / 8 == 2) {
-		if (dir == 1) {
-			TextureAsset(L"ragu_3").mirror().scale(1.0 / 4.0 / 100.0).draw(player1.pos + Vec2(-68, -34) / 100.0);
-		}
-		else if (dir == -1) {
-			TextureAsset(L"ragu_3").scale(1.0 / 4.0 / 100.0).draw(player1.pos + Vec2(-48, -34) / 100.0);
+			TextureAsset(L"ragu_5").scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-38, -14) / 100.0);
 		}
 	}
 	else {
 		if (dir == 1) {
-			TextureAsset(L"ragu_4").mirror().scale(1.0 / 4.0 / 100.0).draw(player1.pos + Vec2(-68, -34) / 100.0);
+			TextureAsset(L"ragu_6").mirror().scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-53, -14) / 100.0);
 		}
 		else if (dir == -1) {
-			TextureAsset(L"ragu_4").scale(1.0 / 4.0 / 100.0).draw(player1.pos + Vec2(-48, -34) / 100.0);
+			TextureAsset(L"ragu_6").scale(1.0 / 4.5 / 100.0).draw(player1.pos + Vec2(-38, -14) / 100.0);
 		}
 	}
 
