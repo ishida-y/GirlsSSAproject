@@ -136,7 +136,7 @@ void KeyInput::update() {
 
 GameSystem::GameSystem() :
 	sound_vol(1000),
-	debug(true){
+	debug(false){
 
 }
 

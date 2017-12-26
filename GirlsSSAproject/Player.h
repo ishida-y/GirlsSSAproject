@@ -31,6 +31,7 @@ public:
 	int dir;
 	int c_hit;
 	RectF foot;
+	Vec2 clear;
 
 	const static Vec2 BLOCK_SIZE;
 	const static Vec2 PLAYER_SIZE;

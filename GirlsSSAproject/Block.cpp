@@ -26,7 +26,7 @@ BlockManager::BlockManager(const ham::PhysicsWorld& world) {
 }
 
 void BlockManager::draw() const{
-	normal_block.draw();
+	//normal_block.draw();
 	
 	for (int i = 0; i < ground.size(); i++) {
 		ground[i].draw();
@@ -45,12 +45,14 @@ Ground::Ground() {
 
 void Ground::draw() const {
 	if (id == 10) {
-		obj.drawFrame(0.03, 0.0 , Palette::Green);
+		//obj.drawFrame(0.03, 0.0 , Palette::Green);
+		TextureAsset(L"block0").scale(1.0/100.0).draw(obj.pos);
 	}
 	else if (id == 11) {
-		obj.drawFrame(0.03, 0.0, Palette::Greenyellow);
+		//obj.drawFrame(0.03, 0.0, Palette::Greenyellow);
 	}
 	else if (id == 12) {
-		obj.drawFrame(0.03, 0.0, Palette::Lightgreen);
+		//obj.drawFrame(0.03, 0.0, Palette::Lightgreen);
+		TextureAsset(L"block2").scale(1.0 / 100.0).draw(obj.pos);
 	}
 }

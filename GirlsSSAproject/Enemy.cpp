@@ -1,5 +1,6 @@
 #include"Enemy.h"
 #include"Player.h"
+#include"System.h"
 
 Enemy::Enemy() :
 	hp(100),
@@ -10,7 +11,9 @@ Enemy::Enemy() :
 	disPlayer(false),
 	hit(false),
 	c_move(0),
-	c_hit(0) {
+	c_hit(0),
+	atc_damage(0),
+	hit_damage(0){
 
 }
 
@@ -55,6 +58,9 @@ Dog::Dog(const ham::PhysicsWorld& world, Vec2 _pos) {
 	obj.setFixedRotation(true);
 	range = RectF(obj.getPos(), DOG_SIZE);
 	c_move = Random(0, 100);
+
+	atc_damage = 10;
+	hit_damage = 34;
 }
 
 void Dog::move(const Player& player) {
@@ -71,7 +77,7 @@ void Dog::move(const Player& player) {
 			obj.setVelocity(Vec2(3.0 * dir, obj.getVelocity().y));
 		}
 		//’´‹ß‚¢‚Æ‚«’âŽ~ok
-		else if (fabs(player.player1.pos.x - range.pos.x) < (32.0 + 10.0) / 100.0 && dir == -1) {
+		else if (fabs(player.player1.pos.x - range.pos.x) < (64.0 + 10.0) / 100.0 && dir == -1) {
 			obj.setVelocity(Vec2(0, obj.getVelocity().y));
 			if (player.player1.pos.x + player.player1.w / 2 > range.pos.x + range.w / 2) {
 				dir = 1;
@@ -100,7 +106,7 @@ void Dog::move(const Player& player) {
 
 void Dog::attack(const Player& player) {
 	if (atc_c == 0 && Random(1, 60) == 1) {
-		if (fabs(player.player1.pos.x - range.pos.x) < (150.0 + 32.0) / 100.0 && dir == -1) {
+		if (fabs(player.player1.pos.x - range.pos.x) < (150.0 + 64.0) / 100.0 && dir == -1) {
 			atc_c = 60;
 		}
 		else if (fabs(player.player1.pos.x - range.pos.x) < (150.0 / 100.0 + DOG_SIZE.x) && dir == 1) {
@@ -135,7 +141,7 @@ void Dog::check_hit(const Player& player) {
 		c_hit--;
 	}
 	if (player.atc_range.intersects(range) && c_hit == 0) {
-		//hp -= 20;
+		hp -= hit_damage;
 
 		SoundAsset(L"hit").playMulti();
 
@@ -151,14 +157,16 @@ void Dog::check_hit(const Player& player) {
 }
 
 void Dog::draw() const {
-	if (c_hit == 0) {
-		range.draw(Palette::Yellow);
+	if (GameSystem::get().debug) {
+		if (c_hit == 0) {
+			range.draw(Palette::Yellow);
+		}
+		else {
+			range.draw(Palette::Orange);
+		}
+		atc_range.draw();
 	}
-	else {
-		range.draw(Palette::Orange);
-	}
-	atc_range.draw();
-	Println(range.pos);
+
 	if (atc_c == 0) {
 		if (dir == 1) {
 			TextureAsset(L"dog_1").mirror().scale(1.0 / 6.0 / 100.0).draw(range.pos + Vec2(-38, -64) / 100.0);
@@ -197,6 +205,9 @@ Orc::Orc(const ham::PhysicsWorld& world, Vec2 _pos) {
 	obj.setFixedRotation(true);
 	range = RectF(obj.getPos(), ORC_SIZE);
 	c_move = Random(0, 80);
+
+	atc_damage = 20;
+	hit_damage = 20;
 }
 
 void Orc::move(const Player& player) {
@@ -213,7 +224,7 @@ void Orc::move(const Player& player) {
 			obj.setVelocity(Vec2(2.0 * dir, obj.getVelocity().y));
 		}
 		//’´‹ß‚¢‚Æ‚«’âŽ~ok
-		else if (fabs(player.player1.pos.x - range.pos.x) < (10.0 + 32.0) / 100.0 && dir == -1) {
+		else if (fabs(player.player1.pos.x - range.pos.x) < (10.0 + 64.0) / 100.0 && dir == -1) {
 			obj.setVelocity(Vec2(0, obj.getVelocity().y));
 			if (player.player1.pos.x + player.player1.w / 2 > range.pos.x + range.w / 2) {
 				dir = 1;
@@ -225,7 +236,7 @@ void Orc::move(const Player& player) {
 				dir = -1;
 			}
 		}
-		//‹ß‚¢‚Æ‚«’Ç‚¢‚©‚¯‚éok
+		//‹ß‚¢‚Æ‚«’Ç‚¢‚©‚¯‚é‚©‚àok
 		else {
 			if (player.player1.pos.x - range.pos.x < 0 && Random(1, 20) == 1) {
 				dir = -1;
@@ -242,7 +253,7 @@ void Orc::move(const Player& player) {
 
 void Orc::attack(const Player& player) {
 	if (atc_c == 0 && Random(1, 100) == 1) {
-		if (fabs(player.player1.pos.x - range.pos.x) < (150.0 + 32.0) / 100.0 && dir == -1) {
+		if (fabs(player.player1.pos.x - range.pos.x) < (150.0 + 64.0) / 100.0 && dir == -1) {
 			atc_c = 70;
 		}
 		else if (fabs(player.player1.pos.x - range.pos.x) < (150.0 / 100.0 + ORC_SIZE.x) && dir == 1) {
@@ -277,30 +288,31 @@ void Orc::check_hit(const Player& player) {
 		c_hit--;
 	}
 	if (player.atc_range.intersects(range) && c_hit == 0) {
-		//hp -= 20;
+		hp -= hit_damage;
 
 		SoundAsset(L"hit").playMulti();
 
 		obj.setVelocity(Vec2(0, 0));
 		if (range.pos.x > player.player1.pos.x) {
-			obj.applyForce(Vec2(300, -100));
+			obj.applyForce(Vec2(400, -200));
 		}
 		else {
-			obj.applyForce(Vec2(-300, -100));
+			obj.applyForce(Vec2(-400, -200));
 		}
 		c_hit = 30;
 	}
 }
 
 void Orc::draw() const {
-	if (c_hit == 0) {
-		range.draw(Palette::Yellow);
+	if (GameSystem::get().debug) {
+		if (c_hit == 0) {
+			range.draw(Palette::Yellow);
+		}
+		else {
+			range.draw(Palette::Orange);
+		}
+		atc_range.draw();
 	}
-	else {
-		range.draw(Palette::Orange);
-	}
-	atc_range.draw();
-	Println(range.pos);
 
 	if (atc_c == 0) {
 		if (dir == 1) {
