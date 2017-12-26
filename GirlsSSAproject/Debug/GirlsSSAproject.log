@@ -1,3 +1,12 @@
-﻿     ライブラリ C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.lib とオブジェクト C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exp を作成中
+﻿cl : コマンド ライン warning D9030: '/Gm' はマルチプロセシングと互換性がありません。/MP スイッチを無視します
+  GameOver.cpp
+c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+  Enemy.cpp
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(333): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(334): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(346): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(360): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  コードを生成中...
   GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
   GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)
