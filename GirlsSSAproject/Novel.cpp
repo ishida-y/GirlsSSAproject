@@ -37,7 +37,7 @@ void Novel::update(String &part) {
 	if (WaitCount > 0) {
 		WaitCount--;
 	}
-	if (WaitCount <= 0 && GameSystem::get().input.buttonA.clicked) {
+	if (WaitCount <= 0 && GameSystem::get().input.buttonA.pressed) {
 		TalkInfo info;
 		String str;
 		while (str != L" ") {

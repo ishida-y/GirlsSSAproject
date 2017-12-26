@@ -115,13 +115,16 @@ void Dog::attack(const Player& player) {
 		else if (dir == -1) {
 			atc_range = RectF(obj.getPos() + Vec2(-64.0 / 100.0, 0.0), 64.0 / 100.0, DOG_SIZE.y);
 		}
+		if (fabs(player.player1.pos.x - range.pos.x) < 600.0 / 100.0) {
+			SoundAsset(L"dog").playMulti();
+		}
 	}
 	if (atc_c == 29) {
 		atc_range = RectF(0, 0, 0, 0);
 	}
 	if (atc_c > 0) {
 		atc_c--;
-		if (atc_c == 0 && Random(1, 2) == 1) {
+		if (atc_c == 0) {
 			dir *= -1;
 		}
 	}
@@ -133,6 +136,9 @@ void Dog::check_hit(const Player& player) {
 	}
 	if (player.atc_range.intersects(range) && c_hit == 0) {
 		//hp -= 20;
+
+		SoundAsset(L"hit").playMulti();
+
 		obj.setVelocity(Vec2(0, 0));
 		if (range.pos.x > player.player1.pos.x) {
 			obj.applyForce(Vec2(200, -100));
@@ -251,13 +257,16 @@ void Orc::attack(const Player& player) {
 		else if (dir == -1) {
 			atc_range = RectF(obj.getPos() + Vec2(-120.0 / 100.0, 0.0), 120.0 / 100.0, ORC_SIZE.y);
 		}
+		if (fabs(player.player1.pos.x - range.pos.x) < 600.0 / 100.0) {
+			SoundAsset(L"oak").playMulti();
+		}
 	}
 	if (atc_c == 29) {
 		atc_range = RectF(0, 0, 0, 0);
 	}
 	if (atc_c > 0) {
 		atc_c--;
-		if (atc_c == 0 && Random(1, 2) == 1) {
+		if (atc_c == 0 && Random(1, 2) == 2) {
 			dir *= -1;
 		}
 	}
@@ -269,6 +278,9 @@ void Orc::check_hit(const Player& player) {
 	}
 	if (player.atc_range.intersects(range) && c_hit == 0) {
 		//hp -= 20;
+
+		SoundAsset(L"hit").playMulti();
+
 		obj.setVelocity(Vec2(0, 0));
 		if (range.pos.x > player.player1.pos.x) {
 			obj.applyForce(Vec2(300, -100));
