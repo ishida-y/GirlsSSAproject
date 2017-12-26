@@ -1,4 +1,5 @@
 ﻿cl : コマンド ライン warning D9030: '/Gm' はマルチプロセシングと互換性がありません。/MP スイッチを無視します
+<<<<<<< HEAD
   ToBeCon.cpp
   Title.cpp
 c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
@@ -51,3 +52,16 @@ c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject
 c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\action.cpp(27): error C2447: '{': 対応する関数ヘッダーがありません (旧形式の仮引数リスト?)
 c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\action.cpp(63): fatal error C1004: 予期せぬ EOF が検出されました。
   コードを生成中...
+=======
+  GameOver.cpp
+c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+  Enemy.cpp
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(333): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(334): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(346): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\enemy.cpp(360): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  コードを生成中...
+  GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
+  GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)
+>>>>>>> 5283892c5f3ce14c08e95468a1aafac179115b3a

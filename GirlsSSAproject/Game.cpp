@@ -4,7 +4,6 @@
 
 void Game::init() {
 	part = L"novel";
-	
 }
 
 void Game::update() {

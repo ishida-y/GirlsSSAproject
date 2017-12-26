@@ -14,28 +14,34 @@ blockmanager(world){
 	camera = Window::Center() - player.player.getPos();
 	t_camera = Window::Center() - player.player.getPos();
 
+	TextureAsset::Register(L"ragu_1", L"Data/ragu_1.png");
+	TextureAsset::Register(L"ragu_2", L"Data/ragu_2.png");
+	TextureAsset::Register(L"ragu_3", L"Data/ragu_3.png");
+	TextureAsset::Register(L"ragu_4", L"Data/ragu_4.png");
 	TextureAsset::Register(L"dog_1", L"Data/dog_1.png");
 	TextureAsset::Register(L"dog_2", L"Data/dog_2.png");
 	TextureAsset::Register(L"dog_3", L"Data/dog_3.png");
 	TextureAsset::Register(L"oak_1", L"Data/oak_1.png");
 	TextureAsset::Register(L"oak_2", L"Data/oak_2.png");
 	TextureAsset::Register(L"oak_3", L"Data/oak_3.png");
+	SoundAsset::Register(L"bgm", L"Data/bgm.mp3");
+	SoundAsset::Register(L"dog", L"Data/dog.mp3");
+	SoundAsset::Register(L"hit", L"Data/hit.mp3");
+	SoundAsset::Register(L"oak", L"Data/oak.mp3");
+	SoundAsset::Register(L"sword", L"Data/sword.mp3");
 	TextureAsset::PreloadAll;
+	SoundAsset::PreloadAll;
+	SoundAsset(L"bgm").setLoop(true);
 }
 
-<<<<<<< HEAD
-void Action::update() {
-=======
-void Action::update(String &part) {
 
+void Action::update(String &part) {
+	/*
 	if (GameSystem::get().input.buttonA.clicked) {
 		part = L"novel"; //Aボタン押したらクリア
 		return;
-	}
+	}*/
 
-	player.update();
-
->>>>>>> 6b238e83c793737db2c1bc90a400ebebac2ebade
 	world.update(1.0 / 60.0);
 
 	enemymanager.update(player);
