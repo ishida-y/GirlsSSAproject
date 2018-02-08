@@ -18,6 +18,7 @@ void Game::update() {
 	}
 
 	if (actoin.player.hp <= 0) {
+		SoundAsset(L"bgm").stop();
 		changeScene(L"GameOver");
 	}
 }
@@ -29,4 +30,6 @@ void Game::draw() const {
 	if (part == L"novel" || part == L"novel_on_action") {
 		novel.draw();
 	}
+	//Println(novel.talk_log.size(), (novel.talk_log.end() - 1)->scene, (novel.talk_log.end() - 1)->talker);
+
 }

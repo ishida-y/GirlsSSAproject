@@ -115,10 +115,10 @@ void Player::attack() {
 	}
 	if (atc_c == 10) {
 		if (dir == 1) {
-			atc_range = RectF(player.getPos() + Vec2(PLAYER_SIZE.x, 0.0), 64.0 / 100.0, PLAYER_SIZE.y);
+			atc_range = RectF(player.getPos() + Vec2(PLAYER_SIZE.x, 0.0), 64.0 / 100.0, PLAYER_SIZE.y + 10.0/100.0);
 		}
 		else if (dir == -1) {
-			atc_range = RectF(player.getPos() + Vec2(-64.0 / 100.0, 0.0), 64.0 / 100.0, PLAYER_SIZE.y);
+			atc_range = RectF(player.getPos() + Vec2(-64.0 / 100.0, 0.0), 64.0 / 100.0, PLAYER_SIZE.y + 10.0 / 100.0);
 		}
 
 		SoundAsset(L"sword").playMulti();
@@ -148,7 +148,7 @@ void Player::check_hit(const EnemyManager& enemymanager) {
 			}
 			c_hit = 30;
 		}
-		/////////////////
+		
 		if (enemymanager.enemies[i]->range.intersects(foot) && c_hit == 0) {
 			if (player1.pos.x + player1.w / 2 > enemymanager.enemies[i]->range.pos.x + enemymanager.enemies[i]->range.w / 2
 				&& player1.pos.y + player1.h < enemymanager.enemies[i]->range.pos.y) {
