@@ -95,13 +95,13 @@ KeyInput::KeyInput() :
 void KeyInput::update() {
 	buttonStart.update(XInput(0).buttonStart, Gamepad(0).button(9), Input::KeyEscape);
 	buttonBack.update(XInput(0).buttonBack, Gamepad(0).button(8), Input::KeyBackspace);
-	buttonUp.update(XInput(0).buttonUp, Gamepad(0).povForward, Input::KeyUp);
-	buttonDown.update(XInput(0).buttonDown, Gamepad(0).povBackward, Input::KeyDown);
-	buttonRight.update(XInput(0).buttonRight, Gamepad(0).povRight, Input::KeyRight);
-	buttonLeft.update(XInput(0).buttonLeft, Gamepad(0).povLeft, Input::KeyLeft);
-	buttonA.update(XInput(0).buttonA, Gamepad(0).button(2), Input::KeySlash);
-	buttonB.update(XInput(0).buttonB, Gamepad(0).button(1), Input::KeyBackslash);
-	buttonX.update(XInput(0).buttonX, Gamepad(0).button(0), Input::KeySemicolon);
+	buttonUp.update(XInput(0).buttonUp, Gamepad(0).povForward, Input::KeyW);
+	buttonDown.update(XInput(0).buttonDown, Gamepad(0).povBackward, Input::KeyS);
+	buttonRight.update(XInput(0).buttonRight, Gamepad(0).povRight, Input::KeyD);
+	buttonLeft.update(XInput(0).buttonLeft, Gamepad(0).povLeft, Input::KeyA);
+	buttonA.update(XInput(0).buttonA, Gamepad(0).button(2), Input::KeyZ);
+	buttonB.update(XInput(0).buttonB, Gamepad(0).button(1), Input::KeyX);
+	buttonX.update(XInput(0).buttonX, Gamepad(0).button(0), Input::KeyZ);
 	buttonY.update(XInput(0).buttonY, Gamepad(0).button(3), Input::KeyColon);
 	buttonR.update(XInput(0).buttonRB, Gamepad(0).button(5), Input::KeyRShift);
 	buttonL.update(XInput(0).buttonLB, Gamepad(0).button(4), Input::KeyLShift);
@@ -129,8 +129,8 @@ void KeyInput::update() {
 			triggerL = 0;
 		}
 	}
-	stick.update(Input::KeyUp, Input::KeyDown, Input::KeyRight, Input::KeyLeft,
-		Input::KeyW, Input::KeyS, Input::KeyD, Input::KeyA);
+	stick.update(Input::KeyW, Input::KeyS, Input::KeyD, Input::KeyA,
+		Input::KeyUp, Input::KeyDown, Input::KeyRight, Input::KeyLeft);
 }
 
 

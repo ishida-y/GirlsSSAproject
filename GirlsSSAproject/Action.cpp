@@ -31,19 +31,19 @@ blockmanager(world){
 	TextureAsset::Register(L"block0", L"Data/block0.png");
 	TextureAsset::Register(L"block2", L"Data/block2.png");
 	TextureAsset::Register(L"HP", L"Data/HP.png");
+	TextureAsset::PreloadAll;
 	SoundAsset::Register(L"dog", L"Data/dog.mp3");
 	SoundAsset::Register(L"hit", L"Data/hit.mp3");
 	SoundAsset::Register(L"oak", L"Data/oak.mp3");
 	SoundAsset::Register(L"sword", L"Data/sword.mp3");
-	TextureAsset::PreloadAll;
 	SoundAsset::PreloadAll;
 }
 
 
 void Action::update(String &part) {
 	if (player.clear.x < player.player1.pos.x) {
-		part = L"novel";
 		SoundAsset(L"bgm").stop();
+		part = L"novel";
 		return;
 	}
 
@@ -61,7 +61,6 @@ void Action::update(String &part) {
 		t_camera_size -= 0.2;
 	}
 	camera_size = ease * camera_size + (1 - ease) * t_camera_size;
-	Println(camera);
 	camera.y = 354.9;
 }
 
@@ -81,5 +80,5 @@ void Action::draw() const {
 
 	}
 	TextureAsset(L"HP").draw();
-	RectF(Vec2(160, 16), Vec2(player.hp * 3, 32)).draw(Palette::Red);
+	RectF(Vec2(160, 16), Vec2(player.hp * 4, 32)).draw(Palette::Red);
 }

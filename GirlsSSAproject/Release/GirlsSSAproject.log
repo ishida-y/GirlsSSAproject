@@ -1,0 +1,59 @@
+﻿  Action.cpp
+  Block.cpp
+  Enemy.cpp
+  Game.cpp
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Enemy.cpp)
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Enemy.cpp)
+Block.cpp(6): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+Block.cpp(9): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+Block.cpp(31): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+Enemy.cpp(345): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+Enemy.cpp(346): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+Enemy.cpp(358): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+Enemy.cpp(372): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Action.cpp)
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Action.cpp)
+Action.cpp(34): warning C4551: 関数呼び出しに引数リストがありません。
+Action.cpp(39): warning C4551: 関数呼び出しに引数リストがありません。
+  GameOver.cpp
+  Main.cpp
+  Novel.cpp
+  Player.cpp
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Novel.cpp)
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Novel.cpp)
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Player.cpp)
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Player.cpp)
+Novel.cpp(110): warning C4244: '引数': 'double' から 's3d::uint32' への変換です。データが失われる可能性があります。
+Player.cpp(37): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています GameOver.cpp)
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Main.cpp)
+Player.cpp(40): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています GameOver.cpp)
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Main.cpp)
+Player.cpp(51): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+GameOver.cpp(8): warning C4551: 関数呼び出しに引数リストがありません。
+Player.cpp(52): warning C4456: 'x' を宣言すると、以前のローカル宣言が隠蔽されます
+  Player.cpp(38): note: 'x' の宣言を確認してください
+Player.cpp(55): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+Player.cpp(38): warning C4189: 'x': ローカル変数が初期化されましたが、参照されていません
+Player.cpp(139): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+Player.cpp(168): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  Select.cpp
+  Stage.cpp
+  System.cpp
+  Title.cpp
+  ToBeCon.cpp
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています System.cpp)
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています System.cpp)
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Title.cpp)
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Title.cpp)
+Title.cpp(8): warning C4551: 関数呼び出しに引数リストがありません。
+Title.cpp(11): warning C4551: 関数呼び出しに引数リストがありません。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Select.cpp)
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\System.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。 (ソース ファイルをコンパイルしています Select.cpp)
+     ライブラリ C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Release\GirlsSSAproject.lib とオブジェクト C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Release\GirlsSSAproject.exp を作成中
+  コード生成しています。
+  All 1838 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Release\GirlsSSAproject.exe
+  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Release\GirlsSSAproject.pdb (Full PDB)

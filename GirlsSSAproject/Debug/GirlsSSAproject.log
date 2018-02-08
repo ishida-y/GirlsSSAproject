@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Action.cpp
 c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
 c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
@@ -5,3 +6,26 @@ c:\users\iy\documents\girlsssaproject\girlsssaproject\action.cpp(38): warning C4
 c:\users\iy\documents\girlsssaproject\girlsssaproject\action.cpp(39): warning C4551: 関数呼び出しに引数リストがありません。
   GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
   GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)
+=======
+﻿cl : コマンド ライン warning D9030: '/Gm' はマルチプロセシングと互換性がありません。/MP スイッチを無視します
+  Player.cpp
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(37): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(40): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(51): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(52): warning C4456: 'x' を宣言すると、以前のローカル宣言が隠蔽されます
+  c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(38): note: 'x' の宣言を確認してください
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(55): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(38): warning C4189: 'x': ローカル変数が初期化されましたが、参照されていません
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(139): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(168): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  Action.cpp
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\action.cpp(34): warning C4551: 関数呼び出しに引数リストがありません。
+c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\action.cpp(39): warning C4551: 関数呼び出しに引数リストがありません。
+  コードを生成中...
+  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
+  GirlsSSAproject.vcxproj -> C:\Users\Toshiaki Takahashi\OneDrive\ccs\project\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)
+>>>>>>> 3a25af94cb4cb9d71027b8c647e4ca1428ad9817

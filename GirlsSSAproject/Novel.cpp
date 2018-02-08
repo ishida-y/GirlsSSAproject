@@ -37,7 +37,7 @@ void Novel::update(String &part) {
 	if (WaitCount > 0) {
 		WaitCount--;
 	}
-	if (WaitCount <= 0 && GameSystem::get().input.buttonA.pressed) {
+	if (WaitCount <= 0 && (GameSystem::get().input.buttonA.clicked || GameSystem::get().input.buttonY.pressed)) {
 		TalkInfo info;
 		String str;
 		while (str != L" ") {
@@ -60,23 +60,26 @@ void Novel::update(String &part) {
 			info.scene = (talk_log.end() - 1)->scene;
 		}
 		if (info.scene == 100) {
-			while (str != L" ") {
-				if (text.readLine(str) == false) {
+			String str2;
+			while (str2 != L" ") {
+				if (text.readLine(str2) == false) {
 					part = L"finish";
 					return;
 				}
-				if (str.startsWith(L"scene:")) {
-					info.scene = Parse<int>(str.remove(L"scene:"));
+
+				if (str2.startsWith(L"scene:")) {
+					info.scene = Parse<int>(str2.remove(L"scene:"));
 				}
-				else if (str.startsWith(L"talker:")) {
-					info.talker = str.remove(L"talker:");
+				else if (str2.startsWith(L"talker:")) {
+					info.talker = str2.remove(L"talker:");
 				}
 				else {
-					info.words += (str + L"\n");
+					info.words += (str2 + L"\n");
 				}
 			}
 			talk_log.emplace_back(info);
 			part = L"action";
+			SoundAsset(L"bgm").play();
 			return;
 		}
 		talk_log.emplace_back(info);
