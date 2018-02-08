@@ -1,68 +1,7 @@
-﻿cl : コマンド ライン warning D9030: '/Gm' はマルチプロセシングと互換性がありません。/MP スイッチを無視します
-<<<<<<< HEAD
-  Title.cpp
-=======
-<<<<<<< HEAD
-  ToBeCon.cpp
-  Title.cpp
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-  System.cpp
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-  Stage.cpp
-  Select.cpp
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-  Player.cpp
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(34): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(37): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(46): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(47): warning C4456: 'x' を宣言すると、以前のローカル宣言が隠蔽されます
-  c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(35): note: 'x' の宣言を確認してください
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(50): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(35): warning C4189: 'x': ローカル変数が初期化されましたが、参照されていません
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(132): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\player.cpp(161): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-  Novel.cpp
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\novel.cpp(107): warning C4244: '引数': 'double' から 's3d::uint32' への変換です。データが失われる可能性があります。
-  Main.cpp
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-  GameOver.cpp
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-  Game.cpp
-  Enemy.cpp
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\enemy.cpp(321): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\enemy.cpp(322): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\enemy.cpp(334): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\enemy.cpp(348): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-  Block.cpp
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\block.cpp(6): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\block.cpp(9): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\block.cpp(31): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-  Action.cpp
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\action.cpp(23): warning C4551: 関数呼び出しに引数リストがありません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\action.cpp(26): error C2059: 構文エラー: '<<'
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\action.cpp(27): error C2143: 構文エラー: ';' が '{' の前にありません。
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\action.cpp(27): error C2447: '{': 対応する関数ヘッダーがありません (旧形式の仮引数リスト?)
-c:\users\toshiaki takahashi\onedrive\ccs\project\girlsssaproject\girlsssaproject\action.cpp(63): fatal error C1004: 予期せぬ EOF が検出されました。
-  コードを生成中...
-=======
-  GameOver.cpp
->>>>>>> 99b82791f520bb338ff83e4a6d3c3241551b397c
+﻿  Action.cpp
 c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(64): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
 c:\users\iy\documents\girlsssaproject\girlsssaproject\system.h(65): warning C4100: 'r': 引数は関数の本体部で 1 度も参照されません。
-c:\users\iy\documents\girlsssaproject\girlsssaproject\title.cpp(8): warning C4551: 関数呼び出しに引数リストがありません。
-  Game.cpp
-  コードを生成中...
+c:\users\iy\documents\girlsssaproject\girlsssaproject\action.cpp(38): warning C4551: 関数呼び出しに引数リストがありません。
+c:\users\iy\documents\girlsssaproject\girlsssaproject\action.cpp(39): warning C4551: 関数呼び出しに引数リストがありません。
   GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.exe
   GirlsSSAproject.vcxproj -> C:\Users\IY\Documents\GirlsSSAproject\GirlsSSAproject\Debug\GirlsSSAproject.pdb (Full PDB)
->>>>>>> 5283892c5f3ce14c08e95468a1aafac179115b3a
